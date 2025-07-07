@@ -41,4 +41,56 @@ public class Valoracion {
         this.puntuacion = puntuacion;
         this.valorado = valorado;
     }
+
+    //Getters
+
+    public Long getId_valoracion() {
+        return id_valoracion;
+    }
+
+    public Producto getId_producto() {
+        return id_producto;
+    }
+
+    public Usuario getId_usuario() {
+        return id_usuario;
+    }
+
+    public String getComentario() {
+        return comentario;
+    }
+
+    public Integer getPuntuacion() {
+        return puntuacion;
+    }
+
+    public boolean isValorado() {
+        return valorado;
+    }
+
+    //Setters
+    
+    public void setId_valoracion(Long id_valoracion) {
+        this.id_valoracion = id_valoracion;
+    }
+
+    public void setId_producto(Producto id_producto) {
+        this.id_producto = id_producto;
+    }
+
+    public void setId_usuario(Usuario id_usuario) {
+        this.id_usuario = id_usuario;
+    }
+
+    public void setComentario(String comentario) {
+        this.comentario = comentario;
+    }
+
+    public void setPuntuacion(Integer puntuacion) {
+        this.puntuacion = puntuacion;
+    }
+
+    public void setValorado(boolean valorado) {
+        this.valorado = valorado;
+    }
 }

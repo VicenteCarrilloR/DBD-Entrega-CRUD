@@ -47,4 +47,72 @@ public class Tienda {
         this.region = region;
         this.ciudad = ciudad;
     }
+
+    //Getters
+
+    public Long getId_tienda() {
+        return id_tienda;
+    }
+
+    public Usuario getId_usuario() {
+        return id_usuario;
+    }
+
+    public String getNombre_t() {
+        return nombre_t;
+    }
+
+    public String getCalle() {
+        return calle;
+    }
+
+    public Integer getNro_u() {
+        return nro_u;
+    }
+
+    public Integer getNro_calle() {
+        return nro_calle;
+    }
+
+    public String getRegion() {
+        return region;
+    }
+
+    public String getCiudad() {
+        return ciudad;
+    }
+
+    //Setters
+
+    public void setId_tienda(Long id_tienda) {
+        this.id_tienda = id_tienda;
+    }
+
+    public void setId_usuario(Usuario id_usuario) {
+        this.id_usuario = id_usuario;
+    }
+
+    public void setNombre_t(String nombre_t) {
+        this.nombre_t = nombre_t;
+    }
+
+    public void setCalle(String calle) {
+        this.calle = calle;
+    }
+
+    public void setNro_u(Integer nro_u) {
+        this.nro_u = nro_u;
+    }
+
+    public void setNro_calle(Integer nro_calle) {
+        this.nro_calle = nro_calle;
+    }
+
+    public void setRegion(String region) {
+        this.region = region;
+    }
+
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
+    }
 }
