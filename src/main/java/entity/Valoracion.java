@@ -12,11 +12,11 @@ public class Valoracion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_valoracion;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "id_producto", nullable = false)
     private Producto id_producto;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "id_usuario", nullable = false)
     private Usuario id_usuario;
 
@@ -33,8 +33,7 @@ public class Valoracion {
 
     public Valoracion() {}
 
-    public Valoracion(Long id_valoracion, Producto id_producto, Usuario id_usuario, String comentario, Integer puntuacion, boolean valorado) {
-        this.id_valoracion = id_valoracion;
+    public Valoracion(Producto id_producto, Usuario id_usuario, String comentario, Integer puntuacion, boolean valorado) {
         this.id_producto = id_producto;
         this.id_usuario = id_usuario;
         this.comentario = comentario;
