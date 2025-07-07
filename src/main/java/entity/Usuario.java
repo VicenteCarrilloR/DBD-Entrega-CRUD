@@ -6,7 +6,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
 @Entity
-@Table(name = "Usuario")
+@Table(name = "usuario")
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -40,8 +40,8 @@ public class Usuario {
     @Column(name =  "region")
     private String region;
 
-    @Column(name =  "cuidad")
-    private String cuidad;
+    @Column(name =  "ciudad")
+    private String ciudad;
 
     @OneToOne
     @JoinColumn(name = "id_rol", nullable = false)
@@ -49,9 +49,8 @@ public class Usuario {
 
     public Usuario() {
     }
-    public Usuario(Long id_usuario,String nombre_user, String correo_user,String clave,
-                   String calle, Integer nro_depto, Integer nro_calle, String region, String cuidad, Rol rol) {
-        this.id_usuario = id_usuario;
+    public Usuario(String nombre_user, String correo_user,String clave,
+                   String calle, Integer nro_depto, Integer nro_calle, String region, String ciudad, Rol rol) {
         this.nombre_user = nombre_user;
         this.correo_user = correo_user;
         this.clave = clave;
@@ -59,7 +58,7 @@ public class Usuario {
         this.nro_depto = nro_depto;
         this.nro_calle = nro_calle;
         this.region = region;
-        this.cuidad = cuidad;
+        this.ciudad = ciudad;
         this.rol = rol;
 
     }
@@ -127,12 +126,12 @@ public class Usuario {
         this.region = region;
     }
 
-    public String getCuidad() {
-        return cuidad;
+    public String getCiudad() {
+        return ciudad;
     }
 
-    public void setCuidad(String cuidad) {
-        this.cuidad = cuidad;
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
 
 
     }

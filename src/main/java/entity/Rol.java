@@ -3,7 +3,7 @@ package entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Rol")
+@Table(name = "rol")
 public class Rol {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,8 +22,7 @@ public class Rol {
         
     }
     
-    public Rol(Long id_rol, Boolean admin, Boolean jefe_tienda, Boolean cliente) {
-        this.id_rol = id_rol;
+    public Rol(Boolean admin, Boolean jefe_tienda, Boolean cliente) {
         this.admin = admin;
         this.jefe_tienda = jefe_tienda;
         this.cliente = cliente;
