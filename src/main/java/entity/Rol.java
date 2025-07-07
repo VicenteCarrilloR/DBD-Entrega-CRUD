@@ -19,16 +19,16 @@ public class Rol {
     private Boolean cliente;
     
     public Rol() {
-        
+
     }
     
-    public Rol(Long id_rol, Boolean admin, Boolean jefe_tienda, Boolean cliente) {
-        this.id_rol = id_rol;
+    public Rol( Boolean admin, Boolean jefe_tienda, Boolean cliente) {
+
         this.admin = admin;
         this.jefe_tienda = jefe_tienda;
         this.cliente = cliente;
     }
-    
+
     public Long getId_rol() {
         return id_rol;
     }

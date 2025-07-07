@@ -49,9 +49,8 @@ public class Usuario {
 
     public Usuario() {
     }
-    public Usuario(Long id_usuario,String nombre_user, String correo_user,String clave,
+    public Usuario(String nombre_user, String correo_user,String clave,
                    String calle, Integer nro_depto, Integer nro_calle, String region, String cuidad, Rol rol) {
-        this.id_usuario = id_usuario;
         this.nombre_user = nombre_user;
         this.correo_user = correo_user;
         this.clave = clave;
