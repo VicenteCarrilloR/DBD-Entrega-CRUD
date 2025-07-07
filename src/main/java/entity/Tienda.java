@@ -11,7 +11,7 @@ public class Tienda {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_tienda;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "id_usuario", nullable = false)
     private Usuario id_usuario;
 
@@ -37,8 +37,7 @@ public class Tienda {
 
     public Tienda() {}
 
-    public Tienda(Long id_tienda, Usuario id_usuario, String nombre_t, String calle, Integer nro_u, Integer nro_calle, String region, String ciudad) {
-        this.id_tienda = id_tienda;
+    public Tienda(Usuario id_usuario, String nombre_t, String calle, Integer nro_u, Integer nro_calle, String region, String ciudad) {
         this.id_usuario = id_usuario;
         this.nombre_t = nombre_t;
         this.calle = calle;
