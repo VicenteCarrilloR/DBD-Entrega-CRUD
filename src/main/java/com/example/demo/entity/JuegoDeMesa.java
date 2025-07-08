@@ -41,11 +41,11 @@ public class JuegoDeMesa {
 
     // Getters and setters
 
-    public Integer getIdJuego() {
+    public Long getIdJuego() {
         return idJuego;
     }
 
-    public void setIdJuego(Integer idJuego) {
+    public void setIdJuego(Long idJuego) {
         this.idJuego = idJuego;
     }
 

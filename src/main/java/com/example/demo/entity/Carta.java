@@ -41,11 +41,11 @@ public class Carta {
         this.tipoCarta = tipoCarta;
     }
 
-    public Integer getIdCarta() {
+    public Long getIdCarta() {
         return idCarta;
     }
 
-    public void setIdCarta(Integer idCarta) {
+    public void setIdCarta(Long idCarta) {
         this.idCarta = idCarta;
     }
 

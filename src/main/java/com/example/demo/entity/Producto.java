@@ -32,11 +32,11 @@ public class Producto {
         this.stock = stock;
     }
 
-    public Integer getIdProducto(){
+    public Long getIdProducto(){
         return idProducto;
     }
 
-    public void setIdProducto(Integer idProducto){
+    public void setIdProducto(Long idProducto){
         this.idProducto = idProducto;
     }
 
