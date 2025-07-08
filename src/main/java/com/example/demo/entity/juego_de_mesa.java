@@ -1,4 +1,4 @@
-package entity;
+package com.example.demo.entity;
 import jakarta.persistence.*;
 
 @Entity
@@ -27,6 +27,18 @@ public class juego_de_mesa {
 
     @Column(name = "edad_min")
     private Integer edadMin;
+
+    public juego_de_mesa(){}
+
+    public juego_de_mesa(Integer idJuego, Producto producto, String nombreJuego, String descripcion, String tipoJuego, String categoria, Integer edadMin) {
+        this.idJuego = idJuego;
+        this.producto = producto;
+        this.nombreJuego = nombreJuego;
+        this.descripcion = descripcion;
+        this.tipoJuego = tipoJuego;
+        this.categoria = categoria;
+        this.edadMin = edadMin;
+    }
 
     // Getters and setters
 

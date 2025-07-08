@@ -1,4 +1,4 @@
-package entity;
+package com.example.demo.entity;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;
@@ -29,6 +29,18 @@ public class Carta {
 
     @Column(name = "tipo_carta", length = 40)
     private String tipoCarta;
+
+    public Carta(){}
+
+    public Carta(Integer idCarta, Producto producto, String nombreCarta, String descripcion, LocalDate año, String estado, String tipoCarta) {
+        this.idCarta = idCarta;
+        this.producto = producto;
+        this.nombreCarta = nombreCarta;
+        this.descripcion = descripcion;
+        this.año = año;
+        this.estado = estado;
+        this.tipoCarta = tipoCarta;
+    }
 
     public Integer getIdCarta() {
         return idCarta;
