@@ -7,7 +7,7 @@ public class JuegoDeMesa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_juego")
-    private Integer idJuego;
+    private Long idJuego;
 
     @ManyToOne
     @JoinColumn(name = "id_producto", referencedColumnName = "id_producto")

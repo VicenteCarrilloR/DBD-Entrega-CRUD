@@ -8,7 +8,7 @@ public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_producto")
-    private Integer idProducto;
+    private Long idProducto;
 
     @ManyToOne
     @JoinColumn(name = "id_tienda", referencedColumnName = "id_tienda")

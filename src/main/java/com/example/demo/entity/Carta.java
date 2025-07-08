@@ -9,7 +9,7 @@ public class Carta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_carta")
-    private Integer idCarta;
+    private Long idCarta;
 
     @ManyToOne
     @JoinColumn(name = "id_producto", referencedColumnName = "id_producto")
