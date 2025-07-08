@@ -30,8 +30,7 @@ public class juego_de_mesa {
 
     public juego_de_mesa(){}
 
-    public juego_de_mesa(Integer idJuego, Producto producto, String nombreJuego, String descripcion, String tipoJuego, String categoria, Integer edadMin) {
-        this.idJuego = idJuego;
+    public juego_de_mesa(Producto producto, String nombreJuego, String descripcion, String tipoJuego, String categoria, Integer edadMin) {
         this.producto = producto;
         this.nombreJuego = nombreJuego;
         this.descripcion = descripcion;

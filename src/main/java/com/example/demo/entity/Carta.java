@@ -32,8 +32,7 @@ public class Carta {
 
     public Carta(){}
 
-    public Carta(Integer idCarta, Producto producto, String nombreCarta, String descripcion, LocalDate año, String estado, String tipoCarta) {
-        this.idCarta = idCarta;
+    public Carta(Producto producto, String nombreCarta, String descripcion, LocalDate año, String estado, String tipoCarta) {
         this.producto = producto;
         this.nombreCarta = nombreCarta;
         this.descripcion = descripcion;
