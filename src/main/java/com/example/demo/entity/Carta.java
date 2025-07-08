@@ -30,6 +30,15 @@ public class Carta {
     @Column(name = "tipo_carta", length = 40)
     private String tipoCarta;
 
+    public Carta(Producto producto, String nombreCarta, String descripcion, LocalDate año, String estado, String tipoCarta) {
+        this.producto = producto;
+        this.nombreCarta = nombreCarta;
+        this.descripcion = descripcion;
+        this.año = año;
+        this.estado = estado;
+        this.tipoCarta = tipoCarta;
+    }
+
     public Integer getIdCarta() {
         return idCarta;
     }

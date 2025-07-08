@@ -23,6 +23,13 @@ public class Producto {
     @Column(name = "stock")
     private Integer stock;
 
+    public Producto(Tienda tienda, Integer precio, String urlImagen, Integer stock) {
+        this.tienda = tienda;
+        this.precio = precio;
+        this.urlImagen = urlImagen;
+        this.stock = stock;
+    }
+
     public Integer getIdProducto(){
         return idProducto;
     }
