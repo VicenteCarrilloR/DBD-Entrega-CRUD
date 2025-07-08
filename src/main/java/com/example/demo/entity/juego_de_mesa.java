@@ -1,4 +1,4 @@
-package entity;
+package com.example.demo.entity;
 import jakarta.persistence.*;
 
 @Entity
@@ -28,7 +28,9 @@ public class juego_de_mesa {
     @Column(name = "edad_min")
     private Integer edadMin;
 
-    public JuegoDeMesa(Producto producto, String nombreJuego, String descripcion, String tipoJuego, String categoria, Integer edadMin) {
+    public juego_de_mesa(){}
+
+    public juego_de_mesa(Producto producto, String nombreJuego, String descripcion, String tipoJuego, String categoria, Integer edadMin) {
         this.producto = producto;
         this.nombreJuego = nombreJuego;
         this.descripcion = descripcion;
@@ -36,6 +38,8 @@ public class juego_de_mesa {
         this.categoria = categoria;
         this.edadMin = edadMin;
     }
+
+    // Getters and setters
 
     public Integer getIdJuego() {
         return idJuego;

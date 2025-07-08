@@ -1,4 +1,4 @@
-package entity;
+package com.example.demo.entity;
 import jakarta.persistence.*;
 
 @Entity
@@ -22,6 +22,8 @@ public class Producto {
 
     @Column(name = "stock")
     private Integer stock;
+
+    public Producto() {}
 
     public Producto(Tienda tienda, Integer precio, String urlImagen, Integer stock) {
         this.tienda = tienda;
