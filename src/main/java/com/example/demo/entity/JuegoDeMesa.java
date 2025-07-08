@@ -3,7 +3,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "juego_de_mesa")
-public class juego_de_mesa {
+public class JuegoDeMesa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_juego")
@@ -28,9 +28,9 @@ public class juego_de_mesa {
     @Column(name = "edad_min")
     private Integer edadMin;
 
-    public juego_de_mesa(){}
+    public JuegoDeMesa(){}
 
-    public juego_de_mesa(Producto producto, String nombreJuego, String descripcion, String tipoJuego, String categoria, Integer edadMin) {
+    public JuegoDeMesa(Producto producto, String nombreJuego, String descripcion, String tipoJuego, String categoria, Integer edadMin) {
         this.producto = producto;
         this.nombreJuego = nombreJuego;
         this.descripcion = descripcion;
