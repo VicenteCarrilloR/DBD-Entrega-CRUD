@@ -2,6 +2,7 @@ package com.example.demo.service;
 
 import com.example.demo.entity.Valoracion;
 import com.example.demo.repository.ValoracionRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -10,6 +11,7 @@ import java.util.Optional;
 
 @Service
 public class ValoracionService {
+    @Autowired
     private ValoracionRepository valoracionRepository;
 
     public ValoracionService(ValoracionRepository valoracionRepository) {

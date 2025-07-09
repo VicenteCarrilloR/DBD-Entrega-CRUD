@@ -3,6 +3,7 @@ package com.example.demo.controller;
 
 import com.example.demo.entity.Valoracion;
 import com.example.demo.service.ValoracionService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -12,6 +13,7 @@ import java.util.List;
 @Controller
 @RequestMapping("/valoracion")
 public class ValoracionController {
+    @Autowired
     private ValoracionService valoracionService;
 
     public ValoracionController(ValoracionService valoracionService) {

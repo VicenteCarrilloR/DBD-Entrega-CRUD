@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.entity.Tienda;
 import com.example.demo.service.TiendaService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +12,7 @@ import java.util.List;
 @Controller
 @RequestMapping("/tienda")
 public class TiendaController {
+    @Autowired
     private TiendaService tiendaService;
 
     public TiendaController(TiendaService tiendaService) {

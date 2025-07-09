@@ -2,6 +2,7 @@ package com.example.demo.service;
 
 import com.example.demo.entity.Tienda;
 import com.example.demo.repository.TiendaRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -10,6 +11,7 @@ import java.util.Optional;
 
 @Service
 public class TiendaService {
+    @Autowired
     private TiendaRepository tiendaRepository;
 
     public TiendaService(TiendaRepository tiendaRepository) {
