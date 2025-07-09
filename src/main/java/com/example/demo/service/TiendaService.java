@@ -14,10 +14,6 @@ public class TiendaService {
     @Autowired
     private TiendaRepository tiendaRepository;
 
-    public TiendaService(TiendaRepository tiendaRepository) {
-        this.tiendaRepository = tiendaRepository;
-    }
-
     @Transactional(readOnly = true)
     public List<Tienda> listarTodas() {
         return tiendaRepository.findAll();
@@ -28,10 +24,11 @@ public class TiendaService {
         return tiendaRepository.findById(id);
     }
 
+    @Transactional
     public Tienda guardar(Tienda tienda) {
         return tiendaRepository.save(tienda);
     }
-
+    @Transactional
     public void eliminar(Long id) {
         tiendaRepository.deleteById(id);
     }
