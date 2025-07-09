@@ -2,7 +2,6 @@ package com.example.demo.controller;
 
 import com.example.demo.entity.Usuario;
 import com.example.demo.service.UsuarioService;
-import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -45,18 +44,19 @@ public class UsuarioController {
     }
 
     //actualizamos un usuario
-    @PutMapping
+    @PutMapping("/{id}")
     public ResponseEntity<Usuario> actualizarUsuario(@PathVariable Long id, @RequestBody Usuario usuarioActualizado){
         Usuario usuarioAct =  usuarioService.obtenerUsuarioPorId(id).orElse(null);
         if(usuarioAct != null){
             usuarioAct.setNombre_user(usuarioActualizado.getNombre_user());
-            usuarioAct.setCorreo_user(usuarioActualizado.getCorreo_user());
+            usuarioAct.setCorreoUser(usuarioActualizado.getCorreoUser());
             usuarioAct.setClave(usuarioActualizado.getClave());
             usuarioAct.setCalle(usuarioActualizado.getCalle());
             usuarioAct.setNro_depto(usuarioActualizado.getNro_depto());
             usuarioAct.setNro_calle(usuarioActualizado.getNro_calle());
             usuarioAct.setRegion(usuarioActualizado.getRegion());
             usuarioAct.setCiudad(usuarioActualizado.getCiudad());
+            usuarioService.guardarUsuario(usuarioAct);
             return ResponseEntity.ok(usuarioAct);
         }else{
             return ResponseEntity.notFound().build();

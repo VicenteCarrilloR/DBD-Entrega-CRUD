@@ -21,7 +21,7 @@ public class Usuario {
     @NotBlank(message = "El correo es obligatorio")
     @Email(message = "El mail debe ser valido")
     @Column(nullable = false, unique = true,name = "correo_user")
-    private String correo_user;
+    private String correoUser;
 
     @NotBlank(message = "La clave es obligatorio")
     @Size(min=8, message = "La clave debe tener al menos 8 caracteres")
@@ -49,10 +49,10 @@ public class Usuario {
 
     public Usuario() {
     }
-    public Usuario(String nombre_user, String correo_user,String clave,
+    public Usuario(String nombre_user, String correoUser,String clave,
                    String calle, Integer nro_depto, Integer nro_calle, String region, String ciudad, Rol rol) {
         this.nombre_user = nombre_user;
-        this.correo_user = correo_user;
+        this.correoUser = correoUser;
         this.clave = clave;
         this.calle = calle;
         this.nro_depto = nro_depto;
@@ -78,12 +78,12 @@ public class Usuario {
         this.nombre_user = nombre_user;
     }
 
-    public String getCorreo_user() {
-        return correo_user;
+    public String getCorreoUser() {
+        return correoUser;
     }
 
-    public void setCorreo_user(String correo_user) {
-        this.correo_user = correo_user;
+    public void setCorreoUser(String correo_user) {
+        this.correoUser = correo_user;
     }
 
     public String getClave() {

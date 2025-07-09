@@ -32,7 +32,7 @@ public class UsuarioService {
     //obtener por email
     @Transactional(readOnly = true)
     public Optional<Usuario> obtenerUsuarioPorEmail(String email){
-        return usuarioRepository.findByCorreo(email);
+        return usuarioRepository.findByCorreoUser(email);
     }
     //guardar un usuario
     @Transactional
