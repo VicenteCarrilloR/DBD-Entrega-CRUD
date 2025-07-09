@@ -17,8 +17,16 @@ import java.util.Optional;
 public class UsuarioService {
     @Autowired
     private UsuarioRepository usuarioRepository;
-
-    //obtener los usuarios
+    //encriptar contraseña
+    @Autowired
+    private org.springframework.security.crypto.password.PasswordEncoder passwordEncoder;
+//metodo para registrar usuario encriptando la clave
+    @Transactional
+    public Usuario registrarNuevoUsuario(Usuario usuario) {
+        usuario.setClave(passwordEncoder.encode(usuario.getClave()));
+        return usuarioRepository.save(usuario);
+    }
+    //obtener todos los usuarios
     @Transactional(readOnly = true)
     public List<Usuario> obtenerUsuarios(){
         return usuarioRepository.findAll();

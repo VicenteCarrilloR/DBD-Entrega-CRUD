@@ -39,7 +39,7 @@ public class UsuarioController {
     //creamos un usuario
     @PostMapping
     public ResponseEntity<Usuario> crearUsuario(@RequestBody Usuario usuario){
-        Usuario newUsuario = usuarioService.guardarUsuario(usuario);
+        Usuario newUsuario = usuarioService.registrarNuevoUsuario(usuario);
         return ResponseEntity.ok(newUsuario);
     }
 
