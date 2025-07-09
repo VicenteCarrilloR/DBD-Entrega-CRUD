@@ -9,7 +9,7 @@ public class Carta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_carta")
-    private Integer idCarta;
+    private Long idCarta;
 
     @ManyToOne
     @JoinColumn(name = "id_producto", referencedColumnName = "id_producto")
@@ -41,11 +41,11 @@ public class Carta {
         this.tipoCarta = tipoCarta;
     }
 
-    public Integer getIdCarta() {
+    public Long getIdCarta() {
         return idCarta;
     }
 
-    public void setIdCarta(Integer idCarta) {
+    public void setIdCarta(Long idCarta) {
         this.idCarta = idCarta;
     }
 

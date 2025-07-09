@@ -7,7 +7,7 @@ public class JuegoDeMesa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_juego")
-    private Integer idJuego;
+    private Long idJuego;
 
     @ManyToOne
     @JoinColumn(name = "id_producto", referencedColumnName = "id_producto")
@@ -41,11 +41,11 @@ public class JuegoDeMesa {
 
     // Getters and setters
 
-    public Integer getIdJuego() {
+    public Long getIdJuego() {
         return idJuego;
     }
 
-    public void setIdJuego(Integer idJuego) {
+    public void setIdJuego(Long idJuego) {
         this.idJuego = idJuego;
     }
 
