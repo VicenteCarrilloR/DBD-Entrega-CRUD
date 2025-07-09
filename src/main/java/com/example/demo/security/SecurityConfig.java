@@ -6,6 +6,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
+import org.springframework.context.annotation.Configuration;
+
 @Configuration
 public class SecurityConfig {
 
@@ -14,18 +16,15 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/public/**").permitAll()
+                        .requestMatchers("/api/auth/**").permitAll() // login y registro públicos
+                        .requestMatchers("/api/usuarios/**").permitAll() // opcional: permite también acceso a usuarios
                         .anyRequest().authenticated()
                 )
-                .formLogin(form -> form
-                        .loginPage("/login") // puedes crear tu endpoint o vista personalizada
-                        .permitAll()
-                )
-                .logout(logout -> logout.permitAll());
+                .httpBasic(httpBasic -> {});
 
         return http.build();
     }
-
+    //:C
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
