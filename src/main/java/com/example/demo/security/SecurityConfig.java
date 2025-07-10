@@ -16,8 +16,9 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/auth/**").permitAll()   // Permitir login y registro
-                        .anyRequest().authenticated()                 // Todo lo demás requiere estar autenticado
+                        .requestMatchers("/api/auth/**").permitAll()// Permitir login y registro
+                        .requestMatchers("/api/usuarios/**").permitAll()
+                        .anyRequest().authenticated()
                 )
                 .formLogin(form -> form.disable())                // No uses formLogin
                 .httpBasic(httpBasic -> httpBasic.disable());
