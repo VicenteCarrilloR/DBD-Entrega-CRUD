@@ -56,4 +56,13 @@ public class AuthController {
         return ResponseEntity.ok(usuario);
     }
 
+    @GetMapping("/usuario/{email}")
+    public ResponseEntity<?> obtenerUsuario(@PathVariable String email) {
+        Optional<Usuario> usuarioOpt = usuarioService.obtenerUsuarioPorEmail(email);
+        if (usuarioOpt.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Usuario no encontrado");
+        }
+        return ResponseEntity.ok(usuarioOpt.get());
+    }
+
 }
