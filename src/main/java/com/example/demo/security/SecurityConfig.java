@@ -16,11 +16,11 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/auth/**").permitAll() // login y registro públicos
-                        .requestMatchers("/api/usuarios/**").permitAll() // opcional: permite también acceso a usuarios
-                        .anyRequest().authenticated()
+                        .requestMatchers("/api/auth/**").permitAll()   // Permitir login y registro
+                        .anyRequest().authenticated()                 // Todo lo demás requiere estar autenticado
                 )
-                .httpBasic(httpBasic -> {});
+                .formLogin(form -> form.disable())                // No uses formLogin
+                .httpBasic(httpBasic -> httpBasic.disable());
 
         return http.build();
     }

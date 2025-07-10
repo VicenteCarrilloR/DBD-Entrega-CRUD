@@ -8,7 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
-
+import com.example.demo.dto.UsuarioResponse;
 import java.util.Optional;
 
 @RestController
@@ -46,7 +46,14 @@ public class AuthController {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Contraseña incorrecta");
         }
 
+        UsuarioResponse response = new UsuarioResponse(
+                usuario.getId_usuario(),
+                usuario.getCorreoUser(),
+                usuario.getNombre_user(),
+                "ROLE_USER"
+        );
+
         return ResponseEntity.ok(usuario);
     }
 
-    }
+}
